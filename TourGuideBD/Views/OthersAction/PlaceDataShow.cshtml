@@ -1,0 +1,17 @@
+﻿
+@model TourGuideBD.Models.VisitingPlace
+
+@{
+    ViewData["Title"] = "PlaceDataShow";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    @foreach (var item in ViewBag.d)
+    {
+        <p> @item.PlaceId</p>
+        <p> @item.PlaceName</p>
+        <p> @item.Description</p>
+    }
+</section>
+

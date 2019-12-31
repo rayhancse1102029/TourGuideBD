@@ -1,0 +1,37 @@
+﻿@model TourGuideBD.Models.Distric
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Distric</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DistricName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DistricName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EntryDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EntryDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Division)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Division.DivisionName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DistricId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

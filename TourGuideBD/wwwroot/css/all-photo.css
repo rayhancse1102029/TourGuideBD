@@ -1,0 +1,29 @@
+﻿
+
+.all-photo {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.popular-photo-album-item {
+    padding: 5px 5px;
+    border: 2px solid #E8EAED;
+    font-family: revert;
+}
+
+@media screen and (max-width: 800px) {
+    .popular-photo-album-item {
+        margin-top: 10px;
+    }
+}
+
+#read-more-btn-id {
+    background: none;
+    border: 2px solid #E8EAED;
+    font-family: revert;
+}
+
+#read-more-btn-id:hover {
+    background-color: #ffcc00;
+    border: none;
+}

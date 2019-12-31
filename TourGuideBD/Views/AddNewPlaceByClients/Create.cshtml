@@ -1,0 +1,106 @@
+﻿@model TourGuideBD.Models.AddNewPlaceByClient
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>AddNewPlaceByClient</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PlaceName" class="control-label"></label>
+                <input asp-for="PlaceName" class="form-control" />
+                <span asp-validation-for="PlaceName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlaceTypeId" class="control-label"></label>
+                <select asp-for="PlaceTypeId" class ="form-control" asp-items="ViewBag.PlaceTypeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DivisionId" class="control-label"></label>
+                <select asp-for="DivisionId" class ="form-control" asp-items="ViewBag.DivisionId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DistricId" class="control-label"></label>
+                <input asp-for="DistricId" class="form-control" />
+                <span asp-validation-for="DistricId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UpazilaId" class="control-label"></label>
+                <input asp-for="UpazilaId" class="form-control" />
+                <span asp-validation-for="UpazilaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TouristEntryTime" class="control-label"></label>
+                <input asp-for="TouristEntryTime" class="form-control" />
+                <span asp-validation-for="TouristEntryTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EntryFee" class="control-label"></label>
+                <input asp-for="EntryFee" class="form-control" />
+                <span asp-validation-for="EntryFee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactInfo" class="control-label"></label>
+                <input asp-for="ContactInfo" class="form-control" />
+                <span asp-validation-for="ContactInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HowToGo" class="control-label"></label>
+                <input asp-for="HowToGo" class="form-control" />
+                <span asp-validation-for="HowToGo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsSeen" /> @Html.DisplayNameFor(model => model.IsSeen)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenderName" class="control-label"></label>
+                <input asp-for="SenderName" class="form-control" />
+                <span asp-validation-for="SenderName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EntryDate" class="control-label"></label>
+                <input asp-for="EntryDate" class="form-control" />
+                <span asp-validation-for="EntryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

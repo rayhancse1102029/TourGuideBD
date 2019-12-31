@@ -1,0 +1,98 @@
+﻿
+
+body {
+}
+
+
+/*   Ads   */
+
+  /*    Ads five and six for displaying ads in bottom at index page where ads three and 
+         four display:none in the top of at the index page  
+
+      1.   ads css has index page
+      2.   
+
+
+  */
+
+
+.ads-one-180-150, .ads-four-180-150 {
+    width: 180px;
+    height: 150px;
+    background-color: #ffc000;
+    margin: auto;
+           
+}
+.ads-two-180-150, .ads-five-180-150 {
+    width: 180px;
+    height: 150px;
+    background-color: #ffc000;
+    margin: auto;
+            
+}
+.banner-ads-three-970-90 {
+    width: 970px;
+    height: 90px;
+    background-color: #ffc000;
+    margin: auto;
+}
+.banner-ads-six-728-90 {
+    width: 728px;
+    height: 90px;
+    background-color: #ffc000;
+    margin: auto;
+}
+
+@media screen and (max-width: 750px) {
+    .banner-ads-six-728-90 {
+        display: none;
+    }
+    .ads-four-180-150, .ads-five-180-150 {
+        margin-top: 20px;
+    }
+}
+
+  /*   indivisual view page ads  */
+
+
+/*   index page   */
+
+.index-fotter-ads {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+/*    about us page   */
+
+.side-bar-ads-seven-300-600 {
+    width: 300px;
+    height: 600px;
+    background-color: #fcc000;
+}
+
+@media screen and (max-width: 1000px) {
+    .banner-ads-three-970-90 {
+        display: none;
+    }
+    .about-us {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/*  [space between section] Section customize  */
+
+.space-before {
+    height: 25px;
+}
+
+.space-after {
+    height: 50px;
+}
+
+/*   use when left and right sidel contain 180 * 150  Ads    */
+.section-heading-img-space {
+    height: 50px;
+}
+

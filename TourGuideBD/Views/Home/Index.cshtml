@@ -1,0 +1,781 @@
+﻿
+@model TourGuideBD.Models.VisitingPlace
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="overlay-one"></div>
+                <img src="~/images/Slider-One.jpg" alt="slider img missing!!!" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <h1 class="animated fadeInLeft"><b>Queen of all countries</b></h1>
+                    <h3 class="animated fadeInRight"><b>Bangladesh</b></h3>
+                    <a class="btn btn-default animated rotateIn"><b>Read more!</b></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="overlay-one"></div>
+                <img src="~/images/Slider-Two-Beach.jpg" alt="Betch img missing!!!" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <h1 class="animated fadeInUp"><b>Longest sea beach</b></h1>
+                    <h3 class="animated fadeInDown"><b>Cox<span>&#8217;</span>s bazar in Bangladesh</b></h3>
+                    <a class="btn btn-default animated rotateIn"><b>Read more!</b></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="overlay-one"></div>
+                <img src="~/images/Slider-Three.jpg" alt="slider img missing!!!" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <h1 class="animated fadeInLeft"><b>Travel in Bangladesh</b></h1>
+                    <h3 class="animated fadeInRight"><b>enjoy your life and be happy</b></h3>
+                    <a class="btn btn-default animated rotateIn"><b>Read more!</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="search-table">
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <form asp-action="Search" asp-controller="OthersAction" class="form-horizontal" role="form">
+
+                        @*<div class="col-lg-1 col-md-1"></div>*@
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <select id="division-id" class="form-control">
+                                        <option value="0">----Select Division----</option>
+                                        @foreach (var item in ViewBag.DivisionList)
+                                        {
+                                            <option value="@item.DivisionId">@item.DivisionName</option>
+                                        }
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <select id="distric-id" class="form-control">
+                                        <option value="0">----Select Distric----</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <select asp-for="PlaceId" id="place-id" class="form-control">
+                                        <option value="0">----Select Place----</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="submit" value="Search" id="search-id" class="btn btn-block"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        @*<div class="col-lg-1 col-md-1"></div>*@
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*      Travel Advice Section         *@
+
+<div class="space-before"></div>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="ads-one-180-150">
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="section-heading-img-space"></div>
+                <div class="section-heading">
+                    <img src="~/images/Section-Iteam-Travel-Advice.png" class="img-responsive" />
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="ads-two-180-150">
+
+                </div>
+            </div>
+        </div>
+        <div class="space-after"></div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="~/images/travel-health-advice.jpg" class="float-img" />
+                <p>
+                    <span style="font-size: 20px;">Stay healthy while traveling</span> <br />Health is the key of happiness. We go for a travel in a variety of activities. A...........
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="~/images/coxsbazar-turist-police-250x250.jpg" class="float-img" />
+                <p>
+                    <span style="font-size: 20px;">Photographer Uniform</span><br /> Cox<span>&apos;</span>s Bazar tourist police distributing uniform to prevent harassment of tourist...........
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="~/images/tour-with-baby-250x250.jpg" class="float-img" />
+                <p>
+                    <span style="font-size: 20px;">Travel with Baby/Child</span><br /> Tour/Travel always interesting and exciting but after being mom it will be...........
+                </p>
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="~/images/traveler-bags-150x150.jpg" class="float-img" />
+                <p>
+                    <span style="font-size: 20px;">Select Travel Bags</span><br />We need to take extra care about travel bag selection. If your travel bag is not...........
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="~/images/travel-dress-150x150.jpg" class="float-img" />
+                <p>
+                    <span style="font-size: 20px;">
+                        Dress Selection
+                    </span><br />Dress is the key element of comfort and comfort make happy. So we need to...........
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <img src="~/images/local-people-150x150.jpg" class="float-img" />
+                <p>
+                    <span style="font-size: 20px;">Respect the local people</span><br />If your destination is rural area of Bangladesh you need to respect there...........
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@*      popular tourist spot         *@
+
+<div class="space-before"></div>
+
+<div class="banner-ads-three-970-90">
+
+</div>
+
+<div class="space-before"></div>
+
+<section>
+    <div class="tourist-spot">
+        <div class="container">
+            <div class="row">
+                <div class="space-tourist-spot"></div>
+                <div class="section-heading">
+                    <img src="~/images/Section-Iteam-Popular-tourist-place.png" class="img-responsive" />
+                </div>
+            </div>
+            <div class="space-after"></div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="content-two">
+                        <img src="~/images/bicnakandi-sylhet.jpg" class="img-responsive" />
+                        <div class="overlay-two">
+                            <h4>Bichanakandi - Sylhet</h4>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star " aria-hidden="true"></i>
+                            <hr />
+                            <p>Bichanakandi is one of outstanding geographical tourist place between India and Bangladesh border. You can see the flags of India standing there 100 feet’s away.</p>
+                            <a class="btn btn-default tourist-spot-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="content-two">
+                        <img src="~/images/Tamanna-World-Family-Park.jpg" class="img-responsive" />
+                        <div class="overlay-two">
+                            <h4>Tamanna World Family Park – Mirpur</h4>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star " aria-hidden="true"></i>
+                            <hr />
+                            <p>Tamanna World Family Park is most popular and famous park in Dhaka which is located beside the bank of Tuerag river at Mirpur, Dhaka.</p>
+                            <a class="btn btn-default tourist-spot-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="content-two">
+                        <img src="~/images/Dream-Holyday-Park-Narsingdi-.jpg" class="img-responsive" />
+                        <div class="overlay-two">
+                            <h4>Dream Holiday Park – Narsingdi</h4>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star " aria-hidden="true"></i>
+                            <hr />
+                            <p>Dream Holiday Park in Narsingdi, Really you will enjoy here international standard service.</p>
+                            <a class="btn btn-default tourist-spot-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-before"></div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="content-two">
+                        <img src="~/images/raer-kathi-jomidar-bari.jpg" class="img-responsive" />
+                        <div class="overlay-two">
+                            <h4>Rayerakathi Landlord House – Pirojpur</h4>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <hr />
+                            <p>Rayerakathi landlord house located just three kilometers away from the district town of Pirojpur.</p>
+                            <a class="btn btn-default tourist-spot-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="content-two">
+                        <img src="~/images/Jaflong-Sylhet.jpg" class="img-responsive" />
+                        <div class="overlay-two">
+                            <h4>Jaflong – Sylhet</h4>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <hr />
+                            <p>Jaflong of Sylhet is called the daughter of nature. This is a lovely land of natural beauty on the foothils of Jointa hill. The decorted stone on the bank of Pian river increases its beauty.</p>
+                            <a class="btn btn-default tourist-spot-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="content-two">
+                        <img src="~/images/Lalakhal-most-attractive-tourist-spot-in-sylhet.jpg" class="img-responsive" />
+                        <div class="overlay-two">
+                            <h4>Lalakhal – Sylhet</h4>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <i class="fa fa-star Chaked" aria-hidden="true"></i>
+                            <hr />
+                            <p>Lalakhal is situated in Jointapur Upazila about 35 km away from Sylhet city. The location of Lalakhal is just below the Cheraponji of India.</p>
+                            <a class="btn btn-default tourist-spot-btn">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="space-after"></div>
+        <div class="space-before"></div>
+    </div>
+</section>
+
+
+<div class="space-after"></div>
+
+@*  Travel Style   *@
+
+<section>
+    <div class="container">
+        <div class="travel-style">
+            <div class="row">
+                <div class="section-heading">
+                    <img src="~/images/Section-Iteam-Travel-Style.png" class="img-responsive" />
+                </div>
+            </div>
+            <div class="space-after"></div>
+            <div class="space-before"></div>
+            <div class="row">
+                <div class="container">
+                    <div class="travel-style-img-list">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                            <div class="content-three">
+                                <img src="~/images/travel-style-01.jpg" />
+                                <div class="overlay-three">
+                                    <h3>River and <br /> Beach</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                            <div class="content-three">
+                                <img src="~/images/travel-style-02.jpg" />
+                                <div class="overlay-three">
+                                    <h3>Historical <br /> Place</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                            <div class="content-three">
+                                <img src="~/images/travel-style-03.jpg" />
+                                <div class="overlay-three">
+                                    <h3>Modern <br />Architecture</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                            <div class="content-three">
+                                <img src="~/images/travel-style-04.jpg" />
+                                <div class="overlay-three">
+                                    <h3>Hill Trace <br /> Tour</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                            <div class="content-three">
+                                <img src="~/images/travel-style-05.jpg" />
+                                <div class="overlay-three">
+                                    <h3>Gardens and <br /> Forest</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                            <div class="content-three">
+                                <img src="~/images/travel-style-06.jpg" />
+                                <div class="overlay-three">
+                                    <h3>Entertainment <br /> Center</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="space-after" id="space-after-hidden-id"></div>
+
+    <div class="content-four">
+        <img src="~/images/Tour-Photo-Banner.jpg" class="img-responsive" />
+        <div class="overlay-four">
+            <p>
+                <span style="font-size: 45px; font-family: revert">Bangladesh tour photos?</span> <br />
+                <span style="font-family: revert; font-size: 15px;">
+                    Are you Looking for Bangladesh tour photos? We have organised photo album of <br /> Bangladesh tour and travel.
+                </span> <br /><br />
+                <a class="btn btn-default">Tour Photos</a>
+            </p>
+        </div>
+    </div>
+    <div class="space-after"></div>
+</section>
+
+
+<div class="banner-ads-three-970-90">
+
+</div>
+
+<div class="space-after"></div>
+
+
+@*    Travel of this month    *@
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="section-heading">
+                <img src="~/images/Section-Iteam-Travel-of-this-Month.png" class="img-responsive" />
+            </div>
+        </div>
+        <div class="space-after"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/ilish-mawa-feri-ghat-250x250.jpg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href="http://tourtoday.com.bd/maowa-ferry-ghat-munshiganj/"> Maowa Ferry Ghat &#8211 Munshiganj </a></h4>
+                            <p>The Padma river is far from Dhaka often 36 kilometres.The Maowa Ghat is famous for Elisha fish and sweet. The first chosen of Dhaka folks navigate to eat the Elisha fish in the Maowa Ghat. </p>
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/Manipuri-Palli-Tourist-Places-in-Moulvibazar-250x250.jpeg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href=""> Manipuri Palli / Hamlet &#8211; MouloviBazar </a></h4>
+                            <p>It is about 35km away from Mulovibazar hometown where Munipuri people live in Komolgonj Upazila. Most of Munipuri people of this country live in Adompur and Madobpur. </p>
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/Ham-Ham-Waterfall-Tourist-Places-in-Moulvibazar-250x250.jpg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href=""> Ham Ham Waterfall &#8211 MouloviBazar </a></h4>
+                            <p>Ham Ham or Cita Jorna (waterfall) is situated at Kurma bit area in Rajkandi deep reserve forest under the Upazila Komolgonj in Moulovibazar district.</p> <br />
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/Porikonda-Waterfall-Moulvibazar-250x250.jpg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href=""> Porikonda Waterfall &#8211 Moulovi Bazar </a></h4>
+                            <p>It would be very known to you the name Porikonda waterfall. I can clear you, It might you have heard about Madhobkonda waterfall of Moulovibazar. </p> <br />
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-before"></div>
+
+            <div class="row travel-of-this-month-item-hidden-row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/Madhabkunda-waterfall-in-Moulovi-Bazar-250x250.jpg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href=""> Madhabkunda Waterfall &#8211 MouloviBazar </a></h4>
+                            <p>One of the largest waterfall called Madobkonda waterfall is situated in the land of beauty Moulovibazar district at Upazilla Borolekha. </p>
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/Hail-Haor-Popular-Tourist-Spots-or-Places-in-Moulvibazar-250x250.jpg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href=""> Hail Haor &#8211 Moulvibazar </a></h4>
+                            <p>Haor means a marshy wetland ecosystem physically is bowl or saucer shaped depression that looks like inland seas during the monsoon floods.</p> <br />
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/Lawachara-National-Park-Moulvibazar-250x250.jpg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href=""> Lawachara National Park &#8211 Moulvibazar </a></h4>
+                            <p>Lawachara alive with Biodiversity which is situated at Kamalganj Upazila in Moulovi bazar. It is about 10 km away from the capital of tea Srimongol.</p>
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/Malonichora-tea-garden-best-tourist-place-in-sylhet-250x250.jpg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href=""> Tea garden &#8211 Srimangal </a></h4>
+                            <p>Srimangal can be called the capital of tea in Bangladesh. The magnificent beauty of lots of tea garden attract the tourists.</p> <br /><br />
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-before"> </div>
+
+            <div class="row travel-of-this-month-item-hidden-row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/Lalakhal-most-attractive-tourist-spot-in-sylhet-250x250.jpg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href=""> Lalakhal &#8211 Sylhet </a></h4>
+                            <p>
+                                Lalakhal is situated in Jointapur Upazila about 35 km away from Sylhet city. The location of Lalakhal is just below the Cheraponji of India.
+                            </p>
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="travel-of-this-month-div">
+                    <div class="travel-of-this-month-item">
+                        <div class="hover-effect-one">
+                            <img src="~/images/Shahporaner-Majar-Popular-Tourist-Spots-in-Sylhet-250x250.jpg" class="img-responsive" />
+                            <div class="custom-overlay-one">
+                                <h2>Happy Tour</h2>
+                                <a class="info" href="#">Read More</a>
+                            </div>
+                        </div>
+                        <div class="package-information">
+                            <h4><a href=""> Shahporaner Majar &#8211 Sylhet </a></h4>
+                            <p>Majar(shrine) of Shah poran is glorious pilgrimage or spiritual establishment. It is grave of Shah poran who was one of the companion and follower of Islamic preacher Shah Jalal. </p>
+                            <a class="btn btn-default" href="">Read more</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-after"></div>
+            <div class="show-more-btn">
+                <a class="btn btn-default show-more-btn-click"><b>Show More...</b></a>
+                <a class="btn btn-default hide-more-btn-click"><b>Hidel ALL...</b></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*   Tourist Review   *@
+
+<div class="space-after"></div>
+
+<section class="bg-gray">
+
+    <div class="space-after"></div>
+    <div class="space-before"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="section-heading">
+                <img src="~/images/Section-Iteam-Tourist-Review.png" class="img-responsive" />
+            </div>
+        </div>
+
+        <div class="space-after"></div>
+
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div id="testimonial-slider-id" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item slider-item active">
+                            <p>
+                                Tour Today BD is complete package of bangladesh tour. Grate innovation and effort
+                                from Tour Today BD team. will see you soon at new tour destination of
+                                Bangladesh.
+                            </p>
+
+                            <h3><strong>Aran Roijen </strong>- <span style="font-size: 17px; color: gray">Student</span></h3>
+                        </div>
+                        <!------item slider-item------->
+                        <div class="item slider-item">
+                            <p>
+                                Thank you Tour Today BD, for lot of information in one place about Bangladesh
+                                tourism. I have collect some information about Bangladesh for my summer
+                                vacation. Hope will see a mobile app about it.
+                            </p>
+
+                            <h3><strong>Roxanna Kuijsters </strong>- <span style="font-size: 17px; color: gray">Student</span></h3>
+                        </div>
+                        <!------item slider-item------->
+                    </div>
+                    <!------carousel-inner------>
+                    <!-- Controls -->
+                    <br />
+                    <a class="left slider-control" href="#testimonial-slider-id" role="button"
+                       data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right slider-control" href="#testimonial-slider-id" role="button"
+                       data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="space-after"></div>
+
+</section>
+
+@*   Travel Blog   *@
+
+<div class="space-after"></div>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="section-heading">
+                <img src="~/images/Section-Iteam-Travel-Blog.png" class="img-responsive" />
+            </div>
+        </div>
+        <div class="space-after"></div>
+        <div class="travel-blog">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="travel-blog-item-id">
+                    <div class="hover-effect-one">
+                        <img src="~/images/Hotel-in-Sylhet-Bangladesh.jpg" class="img-responsive" />
+                        <div class="custom-overlay-one">
+                            <h2>Enjoy your life</h2>
+                            <a class="info" href="#">View Hotel</a>
+                        </div>
+                        <h3><strong>Hotel in Sylhet in Bangladesh</strong></h3>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="travel-blog-item-id">
+                    <div class="hover-effect-one">
+                        <img src="~/images/travel-health-advice.jpg" class="img-responsive" />
+                        <div class="custom-overlay-one">
+                            <h2>Enjoy your life</h2>
+                            <a class="info" href="#">View Hotel</a>
+                        </div>
+                        <h3><strong>Stay Healthy while Traveling</strong></h3>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="travel-blog-item-id">
+                    <div class="hover-effect-one">
+                        <img src="~/images/coxsbazar-turist-police.jpg" class="img-responsive" />
+                        <div class="custom-overlay-one">
+                            <h2>Enjoy your life</h2>
+                            <a class="info" href="#">View Hotel</a>
+                        </div>
+                        <h3><strong>Photographer Uniform</strong></h3>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="travel-blog-item-id">
+                    <div class="hover-effect-one">
+                        <img src="~/images/tour-with-baby.jpg" class="img-responsive" />
+                        <div class="custom-overlay-one">
+                            <h2>Enjoy your life</h2>
+                            <a class="info" href="#">View Hotel</a>
+                        </div>
+                        <h3><strong>Travel with Baby/Child</strong></h3>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="travel-blog-item-id">
+                    <div class="hover-effect-one">
+                        <img src="~/images/traveler-bags.jpg" class="img-responsive" />
+                        <div class="custom-overlay-one">
+                            <h2>Enjoy your life</h2>
+                            <a class="info" href="#">View Hotel</a>
+                        </div>
+                        <h3><strong>Select Travel Bag</strong></h3>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="travel-blog-item-id">
+                    <div class="hover-effect-one">
+                        <img src="~/images/travel-dress-500x305.jpg" class="img-responsive" />
+                        <div class="custom-overlay-one">
+                            <h2>Enjoy your life</h2>
+                            <a class="info" href="#">View Hotel</a>
+                        </div>
+                        <h3><strong>Dress Selection</strong></h3>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="space-after"></div>
+
+<div class="index-fotter-ads">
+    <div class="row">
+
+        <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
+            <div class="ads-four-180-150">
+
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+            <div class="banner-ads-six-728-90">
+
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
+            <div class="ads-five-180-150">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space-after"></div>
+

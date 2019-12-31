@@ -1,0 +1,161 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+}
+
+
+ /*   Custtomization      */
+
+.TopBar {
+    background-color: #19A1D8;
+    height: 38px;
+}
+
+.TopBar p {
+    padding-top: 9px;
+    padding-left: 50px;
+    color: white;
+}
+
+#Banglaid, #Englishid {
+    float: right;
+    margin-right: 170px;
+    margin-top: -4px;
+    border: none;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    font-size: 12px;
+    border-radius: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+.TopBar #Banglaid:hover, #Englishid:hover {
+    background-color: #FACE02;
+    border: none;
+    border-radius: 0;
+    color: #1D4380;
+}
+#Banglaid {
+    margin-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#WebsiteLinkid {
+    text-decoration: none;
+    color: white;
+}
+#WebsiteLinkid:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+}
+@media screen and (max-width: 600px) {
+    #WebsiteLinkid {
+       display: none;
+    }
+    .TopBar {
+        height: 38px;
+    }
+    #Englishid {
+        margin-right: 50px;
+    }
+}
+.navbar-default {
+    border: white;
+    background-color: white;
+}
+
+@media screen and (min-width: 500px) {
+    #logo-one-id {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+}
+
+#logo-one-id {
+    padding-right: 20px;
+}
+
+#navbar-nav-list-iteam-id {
+    font-family: revert;
+    font-size: 15px;
+    color: gray;
+    margin-top: 20px;
+}
+#navbar-nav-list-iteam-id li a:hover {
+    color: #face02;
+}
+
+#navbar-nav-list-iteam-id li:hover {
+    
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#sign-up-id, #sign-in-id { 
+   
+    font-family:revert;
+    border: none;
+    text-align: center;
+    border-radius: 10%;
+    margin-top: -7px;
+
+}
+
+#sign-up-id a, #sign-in-id a {
+    color: red;
+}
+
+#sign-up-id {
+
+    margin-right: 10px;
+    
+}
+
+#sign-up-id a:hover, #sign-in-id a:hover {
+   
+    background-color: rgba(0,0,0,0.1);
+    border: none;
+}
+
+
+   /*  modal  */
+
+
+   /*   footer-id   */
+
+#footer-id {
+    background-color: #2E2E2E;
+}
+.top-footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: gray;
+}
+#footer-logo-column-id {
+    margin-top: -30px;
+}
+.social-media-font-awsome i {
+    font-size: 30px;
+}
+.social-media-font-awsome i:hover {
+    color: #FACE02;
+}
+#footer-column-id a {
+    color: gray;
+}
+ 
+#footer-column-id a:hover {
+    color: white;
+}
+.bottom-fotter {
+    background-color: #252525;
+}
+.bottom-fotter p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: gray;
+    text-align: center;
+}
